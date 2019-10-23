@@ -344,6 +344,9 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <embeddedLaunchScriptProperties>
+                        <mode>service</mode>
+                    </embeddedLaunchScriptProperties
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.springframework.boot</groupId>
