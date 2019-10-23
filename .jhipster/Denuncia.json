@@ -1,0 +1,48 @@
+{
+    "name": "Denuncia",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 2550
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "registro",
+            "otherEntityRelationshipName": "denuncia",
+            "relationshipValidateRules": "required",
+            "relationshipName": "registro",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoDenuncia",
+            "otherEntityRelationshipName": "denuncia",
+            "relationshipValidateRules": "required",
+            "relationshipName": "tipo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143844",
+    "entityTableName": "denuncia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

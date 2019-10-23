@@ -1,0 +1,32 @@
+{
+    "name": "SolicitacaoAtualizacao",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "unidadeSaude",
+            "otherEntityRelationshipName": "solicitacaoAtualizacao",
+            "relationshipValidateRules": "required",
+            "relationshipName": "unidade",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143845",
+    "entityTableName": "solicitacao_atualizacao",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

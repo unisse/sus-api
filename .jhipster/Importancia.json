@@ -1,0 +1,32 @@
+{
+    "name": "Importancia",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "registro",
+            "otherEntityRelationshipName": "importancia",
+            "relationshipValidateRules": "required",
+            "relationshipName": "registro",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143842",
+    "entityTableName": "importancia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

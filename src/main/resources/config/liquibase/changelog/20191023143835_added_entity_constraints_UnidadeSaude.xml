@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity UnidadeSaude.
+    -->
+    <changeSet id="20191023143835-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tipo_id"
+                                 baseTableName="unidade_saude"
+                                 constraintName="fk_unidade_saude_tipo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_unidade_saude"/>
+
+        <addForeignKeyConstraint baseColumnNames="situacao_id"
+                                 baseTableName="unidade_saude"
+                                 constraintName="fk_unidade_saude_situacao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="situacao_unidade_saude"/>
+
+    </changeSet>
+</databaseChangeLog>

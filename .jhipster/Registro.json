@@ -1,0 +1,48 @@
+{
+    "name": "Registro",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 2550
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoRegistro",
+            "otherEntityRelationshipName": "registro",
+            "relationshipValidateRules": "required",
+            "relationshipName": "tipo",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "unidadeSaude",
+            "otherEntityRelationshipName": "registro",
+            "relationshipValidateRules": "required",
+            "relationshipName": "unidade",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143838",
+    "entityTableName": "registro",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

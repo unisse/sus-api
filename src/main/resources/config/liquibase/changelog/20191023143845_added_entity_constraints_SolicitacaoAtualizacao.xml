@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity SolicitacaoAtualizacao.
+    -->
+    <changeSet id="20191023143845-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="unidade_id"
+                                 baseTableName="solicitacao_atualizacao"
+                                 constraintName="fk_solicitacao_atualizacao_unidade_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidade_saude"/>
+
+    </changeSet>
+</databaseChangeLog>

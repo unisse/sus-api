@@ -1,0 +1,46 @@
+{
+    "name": "Alteracao",
+    "fields": [
+        {
+            "fieldName": "nomeCampo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "valorAnterior",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "valorNovo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "solicitacaoAtualizacao",
+            "otherEntityRelationshipName": "alteracao",
+            "relationshipValidateRules": "required",
+            "relationshipName": "solicitacao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143839",
+    "entityTableName": "alteracao",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

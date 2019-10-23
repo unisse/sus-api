@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "org.unisse.sus"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "UnisseSUS",
+    "packageName": "org.unisse.sus",
+    "packageFolder": "org/unisse/sus",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmQ2OTRmZmRmY2RiNTM4NGFiYzJlMmU3MDYxMDk2YmU3MDBhNjE1MTBkZjBhY2ViNjFjNTE0NDQyMDNkMmE2OTFjMThlOTgxYzJkZDBmZTdhYTJkN2I2M2M2ZDkzZDdiYTc4NGVjYWYxMjMzYjhlZWIwODk5ZTJkMzZiYjczMjE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

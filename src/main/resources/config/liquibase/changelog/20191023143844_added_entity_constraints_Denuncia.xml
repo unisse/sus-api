@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Denuncia.
+    -->
+    <changeSet id="20191023143844-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="registro_id"
+                                 baseTableName="denuncia"
+                                 constraintName="fk_denuncia_registro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="registro"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_id"
+                                 baseTableName="denuncia"
+                                 constraintName="fk_denuncia_tipo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_denuncia"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,39 @@
+{
+    "name": "Opiniao",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "positiva",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "comentario",
+            "otherEntityRelationshipName": "opiniao",
+            "relationshipValidateRules": "required",
+            "relationshipName": "comentario",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143843",
+    "entityTableName": "opiniao",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Comentario",
+    "fields": [
+        {
+            "fieldName": "criacao",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "comentario",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "registro",
+            "otherEntityRelationshipName": "comentario",
+            "relationshipValidateRules": "required",
+            "relationshipName": "registro",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191023143841",
+    "entityTableName": "comentario",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

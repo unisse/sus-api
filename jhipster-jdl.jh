@@ -1,0 +1,97 @@
+entity UnidadeSaude {
+	nome String required
+    descricao String required
+    horario String required
+	latitude BigDecimal required
+    longitude BigDecimal required
+    endereco String required
+    bairro String required
+    cidade String required
+    uf String required
+    cep String required
+    referencia String required
+}
+
+entity TipoUnidadeSaude {
+	descricao String required
+}
+
+entity SituacaoUnidadeSaude {
+	criacao Instant required
+	descricao String required
+}
+
+//deve estender elogio e ocorrencia
+entity Registro {
+	criacao Instant required
+	descricao String maxlength(2550)
+}
+
+entity Alteracao {
+	nomeCampo String required
+    valorAnterior String required
+    valorNovo String required
+}
+
+entity TipoRegistro {
+	descricao String required
+}
+
+entity Comentario {
+	criacao Instant required
+	comentario String required
+}
+
+entity Importancia {
+	criacao Instant required
+}
+
+entity Opiniao {
+	criacao Instant required
+	positiva Boolean required
+}
+
+entity Denuncia {
+	criacao Instant required
+    descricao String maxlength(2550)
+}
+
+entity SolicitacaoAtualizacao {
+	criacao Instant required
+}
+
+entity SolicitacaoCriacao {
+	criacao Instant required
+}
+
+entity TipoDenuncia {
+	descricao String required
+}
+
+relationship OneToOne {
+	SolicitacaoCriacao{unidade} to UnidadeSaude
+}
+
+relationship ManyToOne {
+	UnidadeSaude{tipo required} to TipoUnidadeSaude
+    UnidadeSaude{situacao required} to SituacaoUnidadeSaude
+    Registro{tipo required} to TipoRegistro
+    Registro{unidade required} to UnidadeSaude
+    Comentario{registro required} to Registro
+    Importancia{registro required} to Registro
+    Opiniao{comentario required} to Comentario
+    Denuncia {registro required} to Registro
+    Denuncia{tipo required} to TipoDenuncia
+    SolicitacaoAtualizacao{unidade required} to UnidadeSaude
+    Alteracao{solicitacao required} to SolicitacaoAtualizacao
+}
+
+// Set pagination options
+paginate * with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
